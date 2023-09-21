@@ -1,0 +1,19 @@
+.icon::after {
+    content: "\e8b6";
+    font-family: "Material Symbols Rounded";
+}
+
+.icon {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 200, 'opsz' 48
+}
+
+.color{
+  color:#FFB6C1" ;
+}
+.div {
+  padding: 150px;
+  background: white;
+  border: 20px solid black;
+  margin: 50px;
+  
+}

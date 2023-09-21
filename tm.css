@@ -1,0 +1,37 @@
+.style {
+  font-family: Times New Roman, 12;
+}
+img {
+  border-radius: 50%;
+}
+
+.avatar {
+  vertical-align: left;
+  width: 100px;
+  height: 100px;
+  float:left;
+  border-radius: 50%;
+}
+
+  .container {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  .text {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 20%;
+    float: left;
+  }
+  
+  .responsive-img{
+    max-width: 100%;
+    height: auto;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+  }

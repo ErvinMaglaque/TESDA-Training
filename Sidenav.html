@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+   <meta name"viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="LS.css">
+  
+  <head>
+    <title>Side Navigation</title>
+      </head>
+    <body>
+  <h1 class="red-text text-lighten-2 center">SideNav</h1>
+<div class="divider"></div>
+<div class="container">
+  <p>This is a slide out menu. You can add a dropdown to your sidebar by using our collapsible component. If you want to see a demo, our sidebar will use this on smaller screens. To use this in conjunction with a fullscreen navigation, you have to use two copies of the same UL.
+<br>
+<br>
+
+<b>Please note that the sidenav HTML should not be contained within the navbar HTML.</b></p>
+  <br>
+
+
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background responsive-img">
+        <img src="Juan.jpg">
+      </div>
+      <a href="#user"><img class="circle" src="RESUME.jpg"></a>
+      <a href="#name"><span class="white-text name">Ervin Jr. Valdez Maglaque</span></a>
+      <a href="https://mail.google.com/mail/mu/mp/694/"><span class="white-text email">emaglaque15@gmail.com</span></a>
+    </div></li>
+    <li><a href="https://www.facebook.com/ervinvaldez.maglaque?mibextid=ZbWKwL"><i class="material-icons">facebook</i>Facebook Account</a></li>
+    <li><a href="https://youtube.com/@vynnnn9681?si=Po6tRup71UZDlAFP"><i class="material-icons">Youtube</i>Youtube Account</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"> <button class="button">Side Nav Demo</button></a>
+  
+  <h3 class="red-text text-lighten-2">Options</h3>
+  <table class="highlight striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>edge</td>
+        <td>String</td>
+        <td>'left'</td>
+        <td>Side of screen on which Sidenav appears.</td>
+      </tr>
+      <tr>
+        <td>draggable</td>
+        <td>Boolean</td>
+        <td>True</td>
+        <td>Allow swipe gestures to open/close Sidenav.</td>
+      </tr>
+      <tr>
+        <td>inDuration</td>
+        <td>Number</td>
+        <td>250</td>
+        <td>Length in ms of enter transition.</td>
+      </tr>
+      <tr>
+        <td>outDuration</td>
+        <td>Number</td>
+        <td>200</td>
+        <td>Length in ms of exit transition.</td>
+      </tr>
+      <tr>
+        <td>onOpenStart</td>
+        <td>Function</td>
+        <td>null</td>
+        <td>Function called when sidenav starts entering.</td>
+      </tr>
+      <tr>
+        <td>onOpenEnd</td>
+        <td>Function</td>
+        <td>null</td>
+        <td>Function called when sidenav finishes entering.</td>
+      </tr>
+      <tr>
+        <td>onCloseStart</td>
+        <td>Function</td>
+        <td>null</td>
+        <td>Function called when sidenav starts exiting.</td>
+      </tr>
+      <tr>
+        <td>onCloseEnd</td>
+        <td>Function</td>
+        <td>null</td>
+        <td>Function called when sidenav finishes exiting.</td>
+      </tr>
+      <tr>
+        <td>preventScrolling</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>Prevent page from scrolling while sidenav is open.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<center><a href="http://localhost:8158/Navbar.html"><span class="red-text text-lighten-2">Back</span></a></center>
+        
+   <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+       <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+  <script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  </script>
+    </body>
+    </html>

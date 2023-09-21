@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+   <meta name"viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+    
+    
+  <link rel="stylesheet" href="LS.css">
+  
+  <head>
+      <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+    <title>Navigation Bar</title>
+
+    <body>
+      <h1 class="red-text text-lighten-2 center">Navbar</h1>
+      <div class="divider"></div>
+      <div class="container">
+      
+      <p>The navbar is fully contained by an HTML5 Nav tag. Inside a recommended container div, there are 2 main parts of the navbar. A logo or brand link, and the navigations links. You can align these links to the left or right.</p>  
+
+<h3 class="red-text text-lighten-2">Right Aligned Links</h3>
+<p>To right align your navbar links, just add a right class to your ul that contains them.
+</p>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Vynnn</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="https://materializecss.com/sass.html">Sass</a></li>
+        <li><a href="https://materializecss.com/badges.html">Components</a></li>
+        <li><a href="https://materializecss.com/collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <h3 class="red-text text-lighten-2">Left Aligned Links</h3>
+<p>To left align your navbar links, just add a left class to your ul that contains them.</p>
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo right">Vynnn</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+   <li><a href="https://materializecss.com/sass.html">Sass</a></li>
+        <li><a href="https://materializecss.com/badges.html">Components</a></li>
+        <li><a href="https://materializecss.com/collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <h3 class="red-text text-lighten-2">Centering the Logo</h3>
+  
+  <p>The logo will center itself on medium and down screens, but if you want the logo to always be centered, add the center class to your a class="brand-logo". You will have to make sure yourself that links do not overlap if you use this.</p>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Vynnn</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href="https://materializecss.com/sass.html">Sass</a></li>
+        <li><a href="https://materializecss.com/badges.html">Components</a></li>
+        <li><a href="https://materializecss.com/collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <h3 class="red-text text-lighten-2">Active Items</h3>
+  <p>Add active class to your li tags to denote the current page.</p>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">Vynn </a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li class="active"><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
+<h3 class="red-text text-lighten-2">Extended Navbar with Tabs</h3>
+<p>To add extended components to the navbar, add the class nav-extended to the outer nav tag. This will allow your navbar height to be variable. Then you can just include a tabs component inside the nav-wrapper.</p>
+
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Vynnn</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#test1">Test 1</a></li>
+        <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+        <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
+        <li class="tab"><a href="#test4">Test 4</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">JavaScript</a></li>
+  </ul>
+
+  <div id="test1" class="col s12"></div>
+  <div id="test2" class="col s12"></div>
+  <div id="test3" class="col s12"></div>
+  <div id="test4" class="col s12"></div>
+  
+  <h3 class="red-text text-lighten-2">Fixed Navbar</h3>
+  <p>To make the navbar fixed, you have to add an outer wrapping div with the class navbar-fixed. This will offset your other content while making your nav fixed. You can adjust the height of this outer div to change how much offset is on your content.</p>
+  <br>
+
+  
+  <h3 class="red-text text-lighten-2">Navbar Dropdown Menu</h3>
+  <p>To add a navbar dropdown menu, add the ul dropdown structure into the page. Then, add an element to trigger the dropdown menu. Make sure to supply the id of the dropdown structure to the data-target attribute of the dropdown trigger.</p>
+  <ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Vynnn</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<h3 class="red-text text-lighten-2">Icon Links</h3>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Vynnn</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+      </ul>
+    </div>
+  </nav>
+<p>You can add icons into links. For icon only links you don't need any additional class. Just pop the i tag in and it will work.</p>
+
+<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a></li>
+        <li><a href="badges.html"><i class="material-icons right">view_module</i>Link with Right Icon</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<p>For adding an icon to a text link you need to add either a left or right class to the icon depending on where you want the icon to be.</p>
+
+<h3 class="red-text text-lighten-2">Buttons</h3>
+<p>You can add buttons into links. For buttons you don't need any additional class. Just pop the .btn class on the a tag.
+</p>
+<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Vynnn</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="waves-effect waves-light btn">Button</a></li>
+        <li><a class="waves-effect waves-light btn">Button <i class="material-icons right">cloud</i></a></li>
+        <li><a class="waves-effect waves-light btn-large">Large Button</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <h3>Halfway FAB in Extended Navbar</h3>
+<p>Add a halfway FAB to your extended navbar.</p>
+
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Vynnn</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a>A link</a></li>
+        <li><a>A second link</a></li>
+        <li><a>A third link</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <span class="nav-title">Title</span>
+      <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal">
+        <i class="material-icons">add</i>
+      </a>
+    </div>
+  </nav>
+  
+  <h3 class="red-text text-lighten-2">Search Bar</h3>
+  <nav>
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+  <p>You can add a search form in the navbar.</p>
+
+<h3 class="red-text text-lighten-2">Mobile Collapse Button</h3>
+<p>When your nav bar is resized, you will see that the links on the right turn into a hamburger icon menu. Take a look at the example below to get this functionality. Add the entire sidenav-trigger line to your nav.
+</p>
+
+<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
+
+</div>
+ <br>
+<script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+        
+</script>
+<center><a href="http://localhost:8158/Sidenav.html"><span class="red-text text-lighten-2">Next Page</span></a></center>
+   <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+       <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+    </head>
+</html>

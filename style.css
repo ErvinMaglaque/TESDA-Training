@@ -1,0 +1,31 @@
+.normal {
+    font-weight: normal;
+    font-size: medium;
+    font-style: oblique;
+}
+body
+{
+  background: transparent;
+}
+
+  .ilike-blue-container {
+    @extend.blue, .lighten-4;
+  }
+  
+  
+  .ilike-blue-container {
+    @extend .blue-text, .text-lighten-4;
+  }
+  
+  .p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif
+  font-size 12;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}

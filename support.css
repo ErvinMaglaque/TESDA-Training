@@ -1,0 +1,40 @@
+Header
+{
+  font-style: italic;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  top:70px;
+}
+div {
+  width: 100px;
+  border: 2px solid gray;
+  padding: 10px;
+  margin: 5px;
+}
+
+div1 {
+  text-align: justify;
+  text-justify: inter-word;
+}
+form.form-example {
+  display: table;
+}
+
+div.form-example {
+  display: table-row;
+}
+
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+
