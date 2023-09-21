@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="uft-8">
+
+    <link rel="stylesheet" href="alalay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    
+  </head>
+  <body>
+    <title>Material box slider with Initialization and Option</title>
+
+  <div class="container">
+ <center> <h1 class="red-text text-lighten-3">Media</h1></center>
+  <hr class="solid">
+  <p>Media components include things that have to do with large media objects like Images, Video, Audio, etc.</p>
+  <br>
+  <h3 style="color: lightpink">Material Box</h3>
+  <p>Material box is a material design implementation of the Lightbox plugin. When a user clicks on an image that can be enlarged, Material box centers the image and enlarges it in a smooth, non-jarring manner. To dismiss the image, the user can either click on the image again, scroll away, or press the ESC key.</p>
+  
+  
+  <img src="sample.jpg" alt="" class="materialboxed responsive-img" data-caption="The Forest" >
+<br>
+
+  
+  <p>Creating the above image with the effect is as simple as adding a materialboxed class to the image tag</p>
+  
+  <h3>Initialization</h3>
+  <fieldset>
+    <legend>language-markup</legend>
+    <label>document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.materialboxed');
+    var instances = M.Materialbox.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });</label>
+  </fieldset>
+  
+  <h3>Options</h3>
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>inDuration</td>
+        <td>Number</td>
+        <td>275</td>
+        <td>Transition in duration in milliseconds.</td>
+      </tr>
+      <tr>
+         <td>outDuration</td>
+        <td>Number</td>
+        <td>200</td>
+        <td>Transition out duration in milliseconds.</td>
+      </tr>
+      <tr>
+        <td>onOpenStart</td>
+        <td>Function</td>
+        <td>Null</td>
+        <td>Callback function called before materialbox is opened.</td>
+      </tr>
+      <tr>
+        <td>onOpenEnd</td>
+        <td>Function</td>
+        <td>Null</td>
+        <td>Callback function called after materialbox is opened.</td>
+      </tr>
+      <tr>
+        <td>onCloseStart</td>
+        <td>Function</td>
+        <td>Null</td>
+        <td>Callback function called before materialbox is closed.</td>
+      </tr>
+      <tr>
+      <td>onCloseEnd</td>
+        <td>Function</td>
+        <td>Null</td>
+        <td>Callback function called after materialbox is closed.</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h3>Methods</h3>
+  
+<blockquote>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin instance like this: 
+<fieldset>
+  <legend>language-markup</legend>
+  <label>var instance = M.Materialbox.getInstance(elem);
+
+    /* jQuery Method Calls
+      You can still use the old jQuery plugin method calls.
+      But you won't be able to access instance properties.
+
+      $('.materialboxed').materialbox('methodName');
+      $('.materialboxed').materialbox('methodName', paramName);
+    */</label>
+</fieldset>
+</blockquote>
+
+<span>.open();</span>
+<p>Open materialbox</p>
+<fieldset>
+  <legend>language-markup</legend>
+  <label>instance .open();</label>
+</fieldset>
+<br>
+
+<span>.close();</span>
+<p>Close materialbox</p>
+<fieldset>
+  <legend>language-markup</legend>
+  <label>instance .close();</label>
+</fieldset>
+<br>
+
+<span>.destroy();</span>
+<p>Destroy plugin instance and teardown</p>
+<fieldset>
+  <legend>language-markup</legend>
+  <label>instance .destroy();</label>
+</fieldset>
+<br>
+<h3>Properties</h3>
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>el</td>
+      <td>Element</td>
+      <td>The DOM element the plugin was initialized with.</td>
+    </tr>
+    <tr>
+      <td>options</td>
+      <td>Objects</td>
+      <td>The options the instance was initialized with.</td>
+    </tr>
+    <tr>
+      <td>overlayActive</td>
+      <td>Boolean</td>
+      <td>If the materialbox overlay is showing.</td>
+    </tr>
+    <tr>
+      <td>doneAnimating</td>
+      <td>Boolean</td>
+      <td>If the carousel is no longer being animated.</td>
+    </tr>
+    <tr>
+      <td>caption</td>
+      <td>String</td>
+      <td>Caption if specified.</td>
+    </tr>
+    <tr>
+      <td>originalWidth</td>
+      <td>Number</td>
+      <td>Original width of image.</td>
+    </tr>
+    <tr>
+      <td>originalHeight</td>
+      <td>Number</td>
+      <td>Original height of image.</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h3>Captions</h3>
+<p>It is very easy to add a short caption to your photo. Just add the caption as a data-caption attribute.</p>
+<br>
+<fieldset>
+  <legend>language-markup</legend>
+  <label>img class="materialboxed" data-caption="A picture of a way with a group of trees in a park" width="250" src="https://lorempixel.com/800/400/nature/4">
+          </label>
+</fieldset>
+
+<h3 style="color: lightpink">Slider</h3>
+<p>Our slider is a simple and elegant image carousel. You can also have captions that will be transitioned on their own depending on their alignment. You can also have indicators that show up on the bottom of the slider.</p>
+
+<!-- Slider -->
+<div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="parallax1.jpg">
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="C.jpg">
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="A.jpg">
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="B.jpg"> 
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <h3>Initialization</h3>
+  <fieldset>
+    <legend>language-markup</legend>
+    <label>document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.slider').slider();
+  });
+</label>
+  </fieldset>
+  
+  <h3>Options</h3>
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Default</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>indicators</td>
+        <td>Boolean</td>
+        <td>true</td>
+        <td>Set to false to hide slide indicators.</td>
+      </tr>
+      <tr>
+        <td>height</td>
+        <td>Number</td>
+        <td>400</td>
+        <td>Set height of slider.</td>
+      </tr>
+      <tr>
+        <td>duration</td>
+        <td>Number</td>
+        <td>500</td>
+        <td>Set the duration of the transition animation in ms.</td>
+      </tr>
+      <tr>
+        <td>interval</td>
+        <td>Number</td>
+        <td>6000</td>
+        <td>	Set the duration between transitions in ms.</td>
+      </tr>
+    </tbody>
+  </table>
+<h3>Methods</h3>
+<p>We have methods to pause, start, move to next and move to previous slide.</p>
+<br>
+<blockquote>Because jQuery is no longer a dependency, all the methods are called on the plugin instance. You can get the plugin instance like this:
+<fieldset>
+  <legend>language-markup</legend>
+  <label>var instance = M.Slider.getInstance(elem);
+
+    /* jQuery Method Calls
+      You can still use the old jQuery plugin method calls.
+      But you won't be able to access instance properties.
+
+      $('.slider').slider('methodName');
+      $('.slider').slider('methodName', paramName);
+    */</label>
+</fieldset>
+</blockquote>
+
+<span>.pause();</span>
+<p>Pause slider autoslide</p>
+<fieldset>
+  <legend>language-markup</legend>
+  <label>instance .pause();</label>
+</fieldset>
+<br>
+
+<span>.start();</span>
+<p>Start slider autoslide</p>
+<fieldset>
+  <legend>language-markup</legend>
+  <label>instance .start();</label>
+</fieldset>
+<br>
+
+<span>.next();</span>
+<p>Move to next slider</p>
+<fieldset>
+  <legend>language-markup</legend>
+  <label>instance .next();</label>
+</fieldset>
+<br>
+
+<span>.prev();</span>
+<p>Move to prev slider</p>
+<fieldset>
+  <legend>language-markup</legend>
+  <label>instance .prev();</label>
+</fieldset>
+<br>
+
+<span>.destroy();</span>
+<p>Destroy plugin and teardown</p>
+<fieldset>
+  <legend>language-markup</legend>
+  <label>instance .destroy();</label>
+</fieldset>
+<br>
+
+<h3>Properties</h3>
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>el</td>
+      <td>Element</td>
+      <td>The DOM element the plugin was initialized with.</td>
+    </tr>
+    <tr>
+      <td>options</td>
+      <td>Object</td>
+      <td>The options the instance was initialized with.</td>
+    </tr>
+    <tr>
+      <td>activeIndex</td>
+      <td>Number</td>
+      <td>Index of current slide.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3> Fullscreen Slider</h3>
+<p>You can easliy make this slider a fullscreen slider by adding the class fullscreen to the slider div. Here's a quick demo.
+</p>
+
+
+
+<a href="http://localhost:8158/Media.html">
+ <b><center><span style="color: lightpink">Back</span></center></b>
+</a>
+</div>
+  </body>
+     <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+       <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+    $('.slider').slider();
+    $('.materialboxed').materialboxed();
+  });
+</script>
+</html>
